@@ -1,63 +1,79 @@
-var shopHours = [6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7]
-
-function randomCus(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
+var shopHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 var seattle = {
     minCustomer: 23,
     maxCustomer: 65,
-    customerPerHour: 0,
     avgCookies: 6.3,
-    setCustomers: function() {
-        this.customerPerHour = randomCus(this.minCustomer, this.maxCustomer);
+    cookiesPerHour: [],
+    setCustomers: function () {
+        return Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
+    },
+    cookPerHour: function () {
+        for (i = 0; i < shopHours.length; i++) {
+            this.cookiesPerHour[i] = Math.floor(this.setCustomers() * this.avgCookies);
+        }
     }
 };
-seattle.setCustomers();
 
 var tokyo = {
     minCustomer: 3,
     maxCustomer: 24,
-    customerPerHour: 0,
     avgCookies: 1.2,
-    setCustomers: function() {
-        this.customerPerHour = randomCus(this.minCustomer, this.maxCustomer);
+    cookiesPerHour: [],
+    setCustomers: function () {
+        return Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
+    },
+    cookPerHour: function () {
+        for (i = 0; i < shopHours.length; i++) {
+            this.cookiesPerHour[i] = Math.floor(this.setCustomers() * this.avgCookies);
+        }
     }
 };
-tokyo.setCustomers();
 
 var dubai = {
     minCustomer: 11,
     maxCustomer: 38,
-    customerPerHour: 0,
     avgCookies: 3.7,
-    setCustomers: function() {
-        this.customerPerHour = randomCus(this.minCustomer, this.maxCustomer);
+    cookiesPerHour: [],
+    setCustomers: function () {
+        return Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
+    },
+    cookPerHour: function () {
+        for (i = 0; i < shopHours.length; i++) {
+            this.cookiesPerHour[i] = Math.floor(this.setCustomers() * this.avgCookies);
+        }
     }
 };
-dubai.setCustomers();
 
 var paris = {
     minCustomer: 20,
     maxCustomer: 38,
-    customerPerHour: 0,
     avgCookies: 2.3,
-    setCustomers: function() {
-        this.customerPerHour = randomCus(this.minCustomer, this.maxCustomer);
+    cookiesPerHour: [],
+    setCustomers: function () {
+        return Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
+    },
+    cookPerHour: function () {
+        for (i = 0; i < shopHours.length; i++) {
+            this.cookiesPerHour[i] = Math.floor(this.setCustomers() * this.avgCookies);
+        }
     }
 };
-paris.setCustomers();
 
 var lima = {
     minCustomer: 2,
     maxCustomer: 16,
-    customerPerHour: 0,
     avgCookies: 4.6,
-    setCustomers: function() {
-        this.customerPerHour = randomCus(this.minCustomer, this.maxCustomer);
+    cookiesPerHour: [],
+    setCustomers: function () {
+        return Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
+    },
+    cookPerHour: function () {
+        for (i = 0; i < shopHours.length; i++) {
+            this.cookiesPerHour[i] = Math.floor(this.setCustomers() * this.avgCookies);
+        }
     }
 };
-lima.setCustomers();
 
 // Within your javascript file (example: app.js), create separate JS object literals for each shop location that outputs the following to the sales.html file:
 
