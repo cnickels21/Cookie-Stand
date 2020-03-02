@@ -22,11 +22,11 @@ seattle.cookPerHour();
 var seattleUl = document.getElementById('store1');
 for (i = 0; i < shopHours.length; i++) {
     var seattleLi = document.createElement('li');
-    seattleLi.textContent = shopHours[i] + ': ' + seattle.cookiesPerHour[i] + ' cookies';
+    seattleLi.textContent = `${shopHours[i]}: ${seattle.cookiesPerHour[i]} cookies`;
     seattleUl.appendChild(seattleLi);
 };
 var seattleTotal = document.createElement('li');
-seattleTotal.textContent = 'Total: ' + seattle.totalCookies + ' cookies';
+seattleTotal.textContent = `Total: ${seattle.totalCookies} cookies`;
 seattleUl.appendChild(seattleTotal);
 
 // End Seattle code
@@ -53,11 +53,11 @@ tokyo.cookPerHour();
 var tokyoUl = document.getElementById('store2');
 for (i = 0; i < shopHours.length; i++) {
     var tokyoLi = document.createElement('li');
-    tokyoLi.textContent = shopHours[i] + ': ' + tokyo.cookiesPerHour[i] + ' cookies';
+    tokyoLi.textContent = `${shopHours[i]}: ${tokyo.cookiesPerHour[i]} cookies`;
     tokyoUl.appendChild(tokyoLi);
 };
 var tokyoTotal = document.createElement('li');
-tokyoTotal.textContent = 'Total: ' + tokyo.totalCookies + ' cookies';
+tokyoTotal.textContent = `Total: ${tokyo.totalCookies} cookies`;
 tokyoUl.appendChild(tokyoTotal);
 
 // End Tokyo code
@@ -84,11 +84,11 @@ dubai.cookPerHour();
 var dubaiUl = document.getElementById('store3');
 for (i = 0; i < shopHours.length; i++) {
     var dubaiLi = document.createElement('li');
-    dubaiLi.textContent = shopHours[i] + ': ' + dubai.cookiesPerHour[i] + ' cookies';
+    dubaiLi.textContent = `${shopHours[i]}: ${dubai.cookiesPerHour[i]} cookies`;
     dubaiUl.appendChild(dubaiLi);
 };
 var dubaiTotal = document.createElement('li');
-dubaiTotal.textContent = 'Total: ' + dubai.totalCookies + ' cookies';
+dubaiTotal.textContent = `Total: ${dubai.totalCookies} cookies`;
 dubaiUl.appendChild(dubaiTotal);
 
 // End Dubai code
@@ -115,11 +115,11 @@ paris.cookPerHour();
 var parisUl = document.getElementById('store4');
 for (i = 0; i < shopHours.length; i++) {
     var parisLi = document.createElement('li');
-    parisLi.textContent = shopHours[i] + ': ' + paris.cookiesPerHour[i] + ' cookies';
+    parisLi.textContent = `${shopHours[i]}: ${paris.cookiesPerHour[i]} cookies`;
     parisUl.appendChild(parisLi);
 };
 var parisTotal = document.createElement('li');
-parisTotal.textContent = 'Total: ' + paris.totalCookies + ' cookies';
+parisTotal.textContent = `Total: ${paris.totalCookies} cookies`;
 parisUl.appendChild(parisTotal);
 
 // End Paris code
@@ -146,11 +146,11 @@ lima.cookPerHour();
 var limaUl = document.getElementById('store5');
 for (i = 0; i < shopHours.length; i++) {
     var limaLi = document.createElement('li');
-    limaLi.textContent = shopHours[i] + ': ' + lima.cookiesPerHour[i] + ' cookies';
+    limaLi.textContent = `${shopHours[i]}: ${lima.cookiesPerHour[i]} cookies`;
     limaUl.appendChild(limaLi);
 };
 var limaTotal = document.createElement('li');
-limaTotal.textContent = 'Total: ' + lima.totalCookies + ' cookies';
+limaTotal.textContent = `Total: ${lima.totalCookies} cookies`;
 limaUl.appendChild(limaTotal);
 
 // End Lima code
