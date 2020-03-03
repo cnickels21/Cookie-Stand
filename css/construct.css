@@ -38,3 +38,8 @@ nav a {
     padding: 5px;
     border-radius: 10px;
 }
+
+table th {
+    border: 2px solid darkslategray;
+    width: 75px;
+}

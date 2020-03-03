@@ -2,7 +2,7 @@ var shopHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '
 
 var eachHour = [];
 
-function tableHead() {
+(function () {
     var header = document.getElementById('daily-hours');
     var firstCell = document.createElement('th');
     firstCell.textContent = '';
@@ -11,12 +11,11 @@ function tableHead() {
         var headerCells = document.createElement('th');
         headerCells.textContent = shopHours[i];
         header.appendChild(headerCells);
-    };
+    }
     var dailyTotals = document.createElement('th');
     dailyTotals.textContent = 'Daily Location Total';
     header.appendChild(dailyTotals);
-};
-tableHead();
+})();
 
 function Store(storeName, minCustomer, maxCustomer, avgCookies) {
     this.storeName = storeName;
@@ -34,7 +33,7 @@ Store.prototype.saleQuantity = function () {
         this.cookiesPerHour[i] = hourlyCookies;
         this.totalCookies += hourlyCookies;
         if (eachHour[i]) {
-            eachHour[i] +=  hourlyCookies;
+            eachHour[i] += hourlyCookies;
         }
         else {
             eachHour[i] = hourlyCookies;
@@ -53,7 +52,7 @@ Store.prototype.render = function () {
         var hourlyCell = document.createElement('td');
         hourlyCell.textContent = this.cookiesPerHour[i];
         cityRow.appendChild(hourlyCell);
-    };
+    }
     var cityTotal = document.createElement('td');
     cityTotal.textContent = this.totalCookies;
     cityRow.appendChild(cityTotal);
@@ -82,7 +81,7 @@ for (var j = 0; j < allStores.length; j++) {
     allStores[j].render();
 };
 
-function tableFoot() {
+(function () {
     var hourlyTotals = document.getElementById('hourly-totals')
     var firstFoot = document.createElement('td');
     firstFoot.textContent = 'Total';
@@ -97,5 +96,4 @@ function tableFoot() {
     var finalFoot = document.createElement('td');
     finalFoot.textContent = grandTotal;
     hourlyTotals.appendChild(finalFoot);
-};
-tableFoot();
+})();
