@@ -1,5 +1,7 @@
 var shopHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
 
+var eachHour = [];
+
 function tableHead() {
     var header = document.getElementById('daily-hours');
     var firstCell = document.createElement('th');
@@ -31,6 +33,12 @@ Store.prototype.saleQuantity = function () {
         var hourlyCookies = Math.floor(customers * this.avgCookies);
         this.cookiesPerHour[i] = hourlyCookies;
         this.totalCookies += hourlyCookies;
+        if (eachHour[i]) {
+            eachHour[i] +=  hourlyCookies;
+        }
+        else {
+            eachHour[i] = hourlyCookies;
+        }
     }
 };
 
@@ -74,11 +82,20 @@ for (var j = 0; j < allStores.length; j++) {
     allStores[j].render();
 };
 
-var hourlyTotals = document.getElementById('hourly-totals')
-
-
-
-// STEPS TO ACCOMPLISH LAB
-// render shopHours array into first table row + Daily Location Total
-// Render Each city object as a specific row separately
-// Totals row for each hour combining each citys hourly sales
+function tableFoot() {
+    var hourlyTotals = document.getElementById('hourly-totals')
+    var firstFoot = document.createElement('td');
+    firstFoot.textContent = 'Total';
+    hourlyTotals.appendChild(firstFoot);
+    var grandTotal = 0;
+    for (i = 0; i < eachHour.length; i++) {
+        var footerTotals = document.createElement('td');
+        footerTotals.textContent = eachHour[i];
+        hourlyTotals.appendChild(footerTotals);
+        grandTotal += eachHour[i];
+    }
+    var finalFoot = document.createElement('td');
+    finalFoot.textContent = grandTotal;
+    hourlyTotals.appendChild(finalFoot);
+};
+tableFoot();
