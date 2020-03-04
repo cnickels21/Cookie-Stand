@@ -83,7 +83,7 @@ for (var j = 0; j < allStores.length; j++) {
 };
 
 (function () {
-    var hourlyTotals = document.getElementById('hourly-totals')
+    var hourlyTotals = document.getElementById('hourly-totals');
     var firstFoot = document.createElement('th');
     firstFoot.textContent = 'Total';
     hourlyTotals.appendChild(firstFoot);
