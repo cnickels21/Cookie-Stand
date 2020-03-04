@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     width: 100%;
+    background-color: rgba(250, 128, 114, 30%);
 }
 
 header {
@@ -33,13 +34,34 @@ nav ul li{
 }
 
 nav a {
-    color: salmon;
+    color: darksalmon;
     background-color: rgba(112, 128, 144, 50%);
     padding: 5px;
     border-radius: 10px;
 }
 
-table th {
+table {
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgba(112, 128, 144, 30%);
+    color: salmon;
+    
+}
+
+table > thead, tbody, tfoot, th, td {
     border: 2px solid darkslategray;
+    height: 30px;
     width: 75px;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+th {
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+td {
+    color: rgb(22, 112, 22);
+    font-style: oblique;
 }
