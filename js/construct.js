@@ -27,6 +27,7 @@ function Store(storeName, minCustomer, maxCustomer, avgCookies) {
 };
 
 Store.prototype.saleQuantity = function () {
+    
     for (var i = 0; i < shopHours.length; i++) {
         var customers = Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
         var hourlyCookies = Math.floor(customers * this.avgCookies);
