@@ -48,3 +48,38 @@ header a:hover {
     border-radius: 10px;
     color: lawngreen;
 }
+
+main:first-of-type div {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+article {
+    float: left;
+    width: 40%;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: darkslategray;
+}
+
+#fishies {
+    float: left;
+    margin-right: 15px;
+}
+
+#family {
+    /* float: right; */
+    display: inline;
+    margin-left: 120px;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    
+    margin-top: 30px;
+}
