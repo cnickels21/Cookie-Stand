@@ -49,12 +49,63 @@ header a:hover {
     color: lawngreen;
 }
 
+form {
+    margin: 50px auto;
+    width: 20%;
+}
+
+fieldset {
+    background-color: darkseagreen;
+    line-height: 1.6em;
+    padding: 15px;
+    border-radius: 30px;
+    border: solid 5px darkgreen;
+}
+
+legend {
+    color: darkslategray;
+    background-color: darksalmon;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 15px;
+    border: solid 5px darkgreen;
+}
+
+button {
+    float: right;
+    margin-top: 15px;
+    font-size: 16px;
+    color: salmon;
+    background-color: darkgreen;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+#cookie-table {
+    border: solid 5px darkslategray;
+    border-radius: 15px;
+    background-color:  rgba(112, 128, 144, 30%);
+}
+
+h3 {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 30px;
+    color: hsl(15, 72%, 50%);
+    text-decoration: underline hsl(15, 72%, 50%);
+}
+
 table {
     margin: 0 auto;
     margin-top: 50px;
-    background-color: rgba(112, 128, 144, 30%);
-    color: salmon;
-    
+    margin-bottom: 50px;
+    background-color: rgba(112, 128, 144, 0.3);
+    color: hsl(6, 93%, 50%);
 }
 
 table > thead, tbody, tfoot, th, td {
@@ -71,6 +122,10 @@ th {
 }
 
 td {
-    color: rgb(22, 112, 22);
+    color: hsl(120, 67%, 15%);
     font-style: oblique;
+}
+
+footer {
+    height: 100px;
 }

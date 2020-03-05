@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Salmon Cookies</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/construct.css">
-    </head>
 
-    <body>
-        <header>
-            <h1>Cookie Sales Per Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="construct.html">Sales</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Salmon Cookies</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/construct.css">
+</head>
 
-        <main>
+<body>
+    <header>
+        <h1>Cookie Sales Per Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="construct.html">Sales</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+
+        <form id="new-Store">
+            <fieldset>
+                <legend>New Store Data</legend>
+                <label for="store-name">Store Location:</label>
+                <input id="store-name" type="text" required /><br />
+                <label>Minimum Customers Per Hour:</label>
+                <input id="min-cust" type="text" required /><br />
+                <label>Maximum Customers Per Hour:</label>
+                <input id="max-cust" type="text" required /><br />
+                <label>Average Cookies Per Hour:</label>
+                <input id="avg-cookie" type="text" required /><br />
+                <button>Submit Store Data</button>
+            </fieldset>
+        </form>
+
+        <section id="cookie-table">
+            <h3>Franchise Cookie Sales</h3>
             <table>
                 <thead id="daily-hours">
-                    
+
                 </thead>
-                <tbody  id="store-table">
+                <tbody id="store-table">
 
                 </tbody>
                 <tfoot id="hourly-totals">
 
                 </tfoot>
             </table>
+        </section>
 
-        </main>
+    </main>
 
-        <footer>
+    <footer>
 
-        </footer>
+    </footer>
 
-        <script src="js/construct.js"></script>
+    <script src="js/construct.js"></script>
 
-    </body>
+</body>
+
 </html>

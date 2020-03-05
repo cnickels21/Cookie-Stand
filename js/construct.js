@@ -4,6 +4,8 @@ var shopHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '
 
 var eachHour = [];
 
+var allStores = [];
+
 // <thead> element is built here
 
 (function () {
@@ -31,6 +33,8 @@ function Store(storeName, minCustomer, maxCustomer, avgCookies) {
     this.cookiesPerHour = [];
     this.totalCookies = 0;
     this.stuffedCookies = this.saleQuantity();
+    this.storeCreation = this.render();
+    allStores.push(this);
 };
 
 // stuffedCookies method is stated here
@@ -50,7 +54,7 @@ Store.prototype.saleQuantity = function () {
     }
 };
 
-// Table date rules for rendering are stated here
+// Table data rules for rendering are stated here
 
 Store.prototype.render = function () {
     var storeTable = document.getElementById('store-table');
@@ -81,14 +85,6 @@ var paris = new Store('Paris', 20, 38, 2.3);
 
 var lima = new Store('Lima', 2, 26, 4.6);
 
-// Table data render function is called for each object
-
-var allStores = [];
-allStores.push(seattle, tokyo, dubai, paris, lima);
-for (var j = 0; j < allStores.length; j++) {
-    allStores[j].render();
-};
-
 // <tfoot> data is defined here
 
 (function () {
@@ -107,3 +103,21 @@ for (var j = 0; j < allStores.length; j++) {
     finalFoot.textContent = grandTotal;
     hourlyTotals.appendChild(finalFoot);
 })();
+
+// Event for form submission
+
+function handleFormSubmitted(event) {
+    event.preventDefault();
+    var nameInput = document.getElementById('store-name');
+    var nameValue = nameInput.value;
+    var minimumInput = document.getElementById('min-cust');
+    var minValue = minimumInput.value;
+    var maximumInput = document.getElementById('max-cust');
+    var maxValue = maximumInput.value;
+    var averageCookInput = document.getElementById('avg-cookie');
+    var averageValue = averageCookInput.value;
+    var newStore = new Store(nameValue, minValue, maxValue, averageValue);
+}
+
+var formElement = document.getElementById('new-Store');
+formElement.addEventListener('submit', handleFormSubmitted);
