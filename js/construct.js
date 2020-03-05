@@ -86,25 +86,6 @@ var lima = new Store('Lima', 2, 26, 4.6);
 
 // Table data render function is called for each object
 
-function handleFormSubmitted(event) {
-    event.preventDefault();
-    var nameInput = document.getElementById('store-name');
-    var nameValue = nameInput.value;
-    var minimumInput = document.getElementById('min-cust');
-    var minValue = minimumInput.value;
-    var maximumInput = document.getElementById('max-cust');
-    var maxValue = maximumInput.value;
-    var averageCookInput = document.getElementById('avg-cookie');
-    var averageValue = averageCookInput.value;
-    var newPet = new Store(nameValue, minValue, maxValue, averageValue);
-    newPet.saleQuantity();
-    newPet.render();
-}
-
-var formElement = document.getElementById('new-Store');
-formElement.addEventListener('submit', handleFormSubmitted);
-
-// allStores.push(seattle, tokyo, dubai, paris, lima);
 for (var j = 0; j < allStores.length; j++) {
     allStores[j].render();
 };
@@ -130,3 +111,20 @@ for (var j = 0; j < allStores.length; j++) {
 
 // Event for form submission
 
+function handleFormSubmitted(event) {
+    event.preventDefault();
+    var nameInput = document.getElementById('store-name');
+    var nameValue = nameInput.value;
+    var minimumInput = document.getElementById('min-cust');
+    var minValue = minimumInput.value;
+    var maximumInput = document.getElementById('max-cust');
+    var maxValue = maximumInput.value;
+    var averageCookInput = document.getElementById('avg-cookie');
+    var averageValue = averageCookInput.value;
+    var newStore = new Store(nameValue, minValue, maxValue, averageValue);
+    newStore.saleQuantity();
+    newStore.render();
+}
+
+var formElement = document.getElementById('new-Store');
+formElement.addEventListener('submit', handleFormSubmitted);
