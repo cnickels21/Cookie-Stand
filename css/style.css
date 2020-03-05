@@ -127,7 +127,7 @@ h5 {
 aside ul {
     float: left;
     clear: both;
-    color: darkslategray;
+    color: hsl(180, 25%, 25%);
     margin-bottom: 15px;
 }
 
