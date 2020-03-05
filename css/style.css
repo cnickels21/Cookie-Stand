@@ -11,19 +11,21 @@ header {
     width: 801px;
     height: 250px;
     text-align: center;
+    border-radius: 20px;
 }
 
 h1 {
     font-size: 4em;
     font-weight: bold;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
     color: salmon;
     background-color: rgba(112, 128, 144, 25%);
+    border-radius: 20px;
 }
 
 nav {
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 nav ul li{
@@ -36,6 +38,106 @@ nav ul li{
 nav a {
     color: salmon;
     background-color: rgba(112, 128, 144, 50%);
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
+    border: solid 2px lawngreen;
+}
+
+header a:hover {
+    background-image: url(../img/frosted-cookie.jpg);
+    border-radius: 10px;
+    color: lawngreen;
+}
+
+main:first-of-type div {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+article {
+    float: left;
+    width: 40%;
+    margin-right: 30px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: darkslategray;
+}
+
+p {
+    color: darkslategray;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+#fishies {
+    float: left;
+    margin-right: 15px;
+}
+
+#family {
+    display: inline;
+    margin-left: 125px;
+    border-radius: 30px;
+}
+
+#chin {
+    margin-top: 60px;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    right: 70px;
+    background-color: lightgray;
+    padding: 15px;
+}
+
+aside p {
+    text-align: center;
+}
+
+h3 {
+    font-size: 28px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    color: darkslategray;
+}
+
+h4 {
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+#cutter {
+    margin-top: 180px
+}
+
+aside ul {
+    float: left;
+    clear: both;
+    color: darkslategray;
+    margin-bottom: 15px;
+}
+
+footer {
+    clear: both;
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    
 }
