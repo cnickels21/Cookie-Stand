@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Salmon Cookies</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/construct.css">
-    </head>
 
-    <body>
-        <header>
-            <h1>Cookie Sales Per Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="construct.html">Sales</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Salmon Cookies</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/construct.css">
+</head>
 
-        <main>
+<body>
+    <header>
+        <h1>Cookie Sales Per Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="construct.html">Sales</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <form id="new-Store">
-                <fieldset>
-                    <legend>New Store Data</legend>
-                    <label for="store-name">Store Location</label>
-                    <input id="store-name" type="text" required />
-                    <label>Minimum Customers Per Hour</label>
-                    <input id="min-cust" type="text"  required />
-                    <label>Maximum Customers Per Hour</label>
-                    <input id="max-cust" type="text"  required />
-                    <label>Average Cookies Per Hour</label>
-                    <input id="avg-cookie" type="text"  required />
-                </fieldset>
-                <button>Submit Store Data</button>
-            </form>
+    <main>
 
-            <table>
-                <thead id="daily-hours">
-                    
-                </thead>
-                <tbody  id="store-table">
+        <form id="new-Store">
+            <fieldset>
+                <legend>New Store Data</legend>
+                <label for="store-name">Store Location</label>
+                <input id="store-name" type="text" required />
+                <label>Minimum Customers Per Hour</label>
+                <input id="min-cust" type="text" required />
+                <label>Maximum Customers Per Hour</label>
+                <input id="max-cust" type="text" required />
+                <label>Average Cookies Per Hour</label>
+                <input id="avg-cookie" type="text" required />
+            </fieldset>
+            <button>Submit Store Data</button>
+        </form>
 
-                </tbody>
-                <tfoot id="hourly-totals">
+        <table>
+            <thead id="daily-hours">
 
-                </tfoot>
-            </table>
+            </thead>
+            <tbody id="store-table">
 
-        </main>
+            </tbody>
+            <tfoot id="hourly-totals">
 
-        <footer>
+            </tfoot>
+        </table>
 
-        </footer>
+    </main>
 
-        <script src="js/construct.js"></script>
+    <footer>
 
-    </body>
+    </footer>
+
+    <script src="js/construct.js"></script>
+
+</body>
+
 </html>

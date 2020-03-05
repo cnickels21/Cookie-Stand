@@ -33,6 +33,7 @@ function Store(storeName, minCustomer, maxCustomer, avgCookies) {
     this.cookiesPerHour = [];
     this.totalCookies = 0;
     this.stuffedCookies = this.saleQuantity();
+    this.storeCreation = this.render();
     allStores.push(this);
 };
 
@@ -53,7 +54,7 @@ Store.prototype.saleQuantity = function () {
     }
 };
 
-// Table date rules for rendering are stated here
+// Table data rules for rendering are stated here
 
 Store.prototype.render = function () {
     var storeTable = document.getElementById('store-table');
@@ -83,12 +84,6 @@ var dubai = new Store('Dubai', 11, 38, 3.7);
 var paris = new Store('Paris', 20, 38, 2.3);
 
 var lima = new Store('Lima', 2, 26, 4.6);
-
-// Table data render function is called for each object
-
-for (var j = 0; j < allStores.length; j++) {
-    allStores[j].render();
-};
 
 // <tfoot> data is defined here
 
@@ -122,8 +117,6 @@ function handleFormSubmitted(event) {
     var averageCookInput = document.getElementById('avg-cookie');
     var averageValue = averageCookInput.value;
     var newStore = new Store(nameValue, minValue, maxValue, averageValue);
-    newStore.saleQuantity();
-    newStore.render();
 }
 
 var formElement = document.getElementById('new-Store');
