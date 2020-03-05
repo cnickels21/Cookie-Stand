@@ -87,7 +87,15 @@ var lima = new Store('Lima', 2, 26, 4.6);
 
 // <tfoot> data is defined here
 
-(function () {
+function totalFooter() {
+    var updateFooter = document.getElementById('hourly-totals');
+    if (updateFooter) {
+        updateFooter.parentNode.removeChild(updateFooter);
+    }
+    var tableFoot = document.createElement('tfoot');
+    tableFoot.setAttribute('id', 'hourly-totals');
+    var cookieTable = document.getElementById('cookie-table');
+    cookieTable.appendChild(tableFoot);
     var hourlyTotals = document.getElementById('hourly-totals');
     var firstFoot = document.createElement('th');
     firstFoot.textContent = 'Total';
@@ -101,8 +109,9 @@ var lima = new Store('Lima', 2, 26, 4.6);
     }
     var finalFoot = document.createElement('td');
     finalFoot.textContent = grandTotal;
-    hourlyTotals.appendChild(finalFoot);
-})();
+    cookieTable.appendChild(hourlyTotals);
+};
+totalFooter();
 
 // Event for form submission
 
@@ -117,6 +126,7 @@ function handleFormSubmitted(event) {
     var averageCookInput = document.getElementById('avg-cookie');
     var averageValue = averageCookInput.value;
     var newStore = new Store(nameValue, minValue, maxValue, averageValue);
+    totalFooter();
 }
 
 var formElement = document.getElementById('new-Store');

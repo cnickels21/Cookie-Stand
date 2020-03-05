@@ -101,11 +101,16 @@ h3 {
 }
 
 table {
-    margin: 0 auto;
+    
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: rgba(112, 128, 144, 0.3);
     color: hsl(6, 93%, 50%);
+}
+
+tbody {
+    margin: 0 auto;
+    width: 100%;
 }
 
 table > thead, tbody, tfoot, th, td {
@@ -125,6 +130,16 @@ td {
     color: hsl(120, 67%, 15%);
     font-style: oblique;
 }
+
+/* #hourly-totals {
+    color: limegreen;
+    margin: 0 auto;
+    width: 100%;
+} */
+
+/* #hourly-totals > td {
+    color: limegreen;
+} */
 
 footer {
     height: 100px;
