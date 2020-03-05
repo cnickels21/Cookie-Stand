@@ -40,7 +40,7 @@ nav a {
     background-color: rgba(112, 128, 144, 50%);
     padding: 10px;
     border-radius: 10px;
-    border: solid 2px lawngreen;
+    border: solid 2px green;
 }
 
 header a:hover {
@@ -57,7 +57,7 @@ main:first-of-type div {
 article {
     float: left;
     width: 40%;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 h2 {
