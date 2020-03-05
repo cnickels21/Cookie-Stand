@@ -83,7 +83,8 @@ var lima = new Store('Lima', 2, 26, 4.6);
 
 // Table data render function is called for each object
 
-var allStores = [seattle, tokyo, dubai, paris, lima];
+var allStores = [];
+allStores.push(seattle, tokyo, dubai, paris, lima);
 for (var j = 0; j < allStores.length; j++) {
     allStores[j].render();
 };
