@@ -127,7 +127,7 @@ function handleFormSubmitted(event) {
     var maxValue = maximumInput.value;
     var averageCookInput = document.getElementById('avg-cookie');
     var averageValue = averageCookInput.value;
-    var newStore = new Store(nameValue, minValue, maxValue, averageValue);
+    new Store(nameValue, minValue, maxValue, averageValue);
     totalFooter();
 }
 
