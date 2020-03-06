@@ -1,3 +1,5 @@
+'use strict';
+
 // Arrays to be used multiple times are defined
 
 var shopHours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
@@ -27,9 +29,9 @@ var allStores = [];
 
 function Store(storeName, minCustomer, maxCustomer, avgCookies) {
     this.storeName = storeName;
-    this.minCustomer = minCustomer;
-    this.maxCustomer = maxCustomer;
-    this.avgCookies = avgCookies;
+    this.minCustomer = parseInt(minCustomer);
+    this.maxCustomer = parseInt(maxCustomer);
+    this.avgCookies = parseInt(avgCookies);
     this.cookiesPerHour = [];
     this.totalCookies = 0;
     this.stuffedCookies = this.saleQuantity();
@@ -63,7 +65,7 @@ Store.prototype.render = function () {
     var cityHeader = document.createElement('th');
     cityHeader.textContent = this.storeName;
     cityRow.appendChild(cityHeader);
-    for (i = 0; i < this.cookiesPerHour.length; i++) {
+    for (var i = 0; i < this.cookiesPerHour.length; i++) {
         var hourlyCell = document.createElement('td');
         hourlyCell.textContent = this.cookiesPerHour[i];
         cityRow.appendChild(hourlyCell);
@@ -101,7 +103,7 @@ function totalFooter() {
     firstFoot.textContent = 'Total';
     hourlyTotals.appendChild(firstFoot);
     var grandTotal = 0;
-    for (i = 0; i < eachHour.length; i++) {
+    for (var i = 0; i < eachHour.length; i++) {
         var footerTotals = document.createElement('td');
         footerTotals.textContent = eachHour[i];
         hourlyTotals.appendChild(footerTotals);
