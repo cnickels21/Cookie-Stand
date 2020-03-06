@@ -109,7 +109,7 @@ function totalFooter() {
     }
     var finalFoot = document.createElement('td');
     finalFoot.textContent = grandTotal;
-    cookieTable.appendChild(hourlyTotals);
+    tableFoot.appendChild(finalFoot);
 };
 totalFooter();
 
