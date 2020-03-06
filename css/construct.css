@@ -50,7 +50,7 @@ header a:hover {
 }
 
 form {
-    margin: 50px auto;
+    margin: 60px auto;
     width: 20%;
 }
 
@@ -88,30 +88,15 @@ input {
 
 #cookie-table {
     border: solid 5px darkslategray;
-    border-radius: 15px;
     background-color:  rgba(112, 128, 144, 30%);
-}
-
-h3 {
-    font-size: 3em;
-    text-align: center;
-    padding-top: 30px;
-    color: hsl(15, 72%, 50%);
-    text-decoration: underline hsl(15, 72%, 50%);
-}
-
-table {
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    background-color: rgba(112, 128, 144, 0.3);
+    margin: 60px auto;
+    width: 75%;
     color: hsl(6, 93%, 50%);
 }
 
 table > thead, tbody, tfoot, th, td {
     border: 2px solid darkslategray;
     height: 30px;
-    width: 75px;
     vertical-align: middle;
     padding: 5px;
 }
@@ -124,8 +109,8 @@ th {
 td {
     color: hsl(120, 67%, 15%);
     font-style: oblique;
-}
+} 
 
 footer {
-    height: 100px;
+    height: 30px;
 }
