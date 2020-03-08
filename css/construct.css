@@ -146,4 +146,6 @@ footer {
     margin-bottom: 30px;
     font-size: 16px;
     text-decoration: underline;
+    color: hsl(6, 93%, 50%);
+    font-family: 'Lobster', cursive;
 }
