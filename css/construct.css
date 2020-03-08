@@ -19,9 +19,10 @@ h1 {
     font-weight: bold;
     text-align: center;
     padding-top: 15px;
-    color: salmon;
+    color: hsl(6, 93%, 50%);
     background-color: rgba(112, 128, 144, 25%);
     border-radius: 20px;
+    font-family: 'Lobster', cursive;
 }
 
 nav {
@@ -37,10 +38,12 @@ nav ul li{
 
 nav a {
     color: salmon;
+    font-family: 'Lobster', cursive;
     background-color: rgba(112, 128, 144, 50%);
     padding: 10px;
     border-radius: 10px;
     border: solid 2px green;
+    text-decoration: none;
 }
 
 header a:hover {
@@ -48,6 +51,49 @@ header a:hover {
     border-radius: 10px;
     color: lawngreen;
 }
+
+section {
+    border: solid darkslategray 5px;
+    margin: 50px ;
+    border-left: none;
+    border-right: none;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: hsl(6, 93%, 50%) underline;
+    font-size: 38px;
+    color: hsl(6, 93%, 50%);
+    padding-top: 60px;
+    font-family: 'Lobster', cursive;
+}
+
+#cookie-table {
+    border: solid 5px darkslategray;
+    background-color:  rgba(112, 128, 144, 30%);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(6, 93%, 50%);
+    
+}
+
+table > thead, tbody, tfoot, th, td {
+    border: 2px solid darkslategray;
+    height: 30px;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+th {
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+td {
+    color: hsl(120, 67%, 15%);
+    font-style: oblique;
+} 
 
 form {
     margin: 60px auto;
@@ -91,31 +137,13 @@ input {
     border-radius: 5px;
 }
 
-#cookie-table {
-    border: solid 5px darkslategray;
-    background-color:  rgba(112, 128, 144, 30%);
-    margin: 60px auto;
-    width: 75%;
-    color: hsl(6, 93%, 50%);
-}
-
-table > thead, tbody, tfoot, th, td {
-    border: 2px solid darkslategray;
-    height: 30px;
-    vertical-align: middle;
-    padding: 5px;
-}
-
-th {
-    font-weight: bolder;
-    font-size: 22px;
-}
-
-td {
-    color: hsl(120, 67%, 15%);
-    font-style: oblique;
-} 
-
 footer {
-    height: 30px;
+    clear: both;
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    text-decoration: underline;
 }
